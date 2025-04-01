@@ -1,8 +1,7 @@
 # multi_layer_sw_HSRP konfigurálás
-<p align="center">
 <img src="sw3.png" alt="multilayer_sw" width="600px">
 <i>Multi layer switch avagy gúnynevén az ánusz/napocska switch</i>
-</p>
+
 ```bash
 
 
