@@ -38,8 +38,10 @@ password 1234
 ### Hiba üzenetek kikapcsolása: a multilayer sw szeret yappingelni/szószátyár üzemmódba kpcsolni érdemes kikapcsolni
 ```bash
 
-logging syncron
 
+ line console 0
+ logging synchronous
+logging syncron
 ```
 
 ```bash
