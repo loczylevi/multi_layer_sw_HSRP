@@ -35,7 +35,7 @@ login local
 password 1234
 
 ```
-### hiba üzenetek kikapcsolása a multilayer sw szeret yappingelni/szószátyár üzemmódba kpcsolni érdemes kikapcsolni
+### Hiba üzenetek kikapcsolása: a multilayer sw szeret yappingelni/szószátyár üzemmódba kpcsolni érdemes kikapcsolni
 ```bash
 
 logging syncron
