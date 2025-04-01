@@ -1,5 +1,7 @@
 # multi_layer_sw_HSRP konfigurálás
 
+<img src="sw3.png" alt="multilayer_sw" width="600px">
+__Multi layer switch avagy gúnynevén az ánusz/napocska switch__
 
 ```bash
 
@@ -32,7 +34,16 @@ password 1234
 line console 0
 login local
 password 1234
+
+```
+### hiba üzenetek kikapcsolása a multilayer sw szeret yappingelni/szószátyár üzemmódba kpcsolni érdemes kikapcsolni
+```bash
+
 logging syncron
+
+```
+
+```bash
 exit
 
 login local
@@ -90,12 +101,21 @@ ip add 192.168.0.121 255.255.255.224
 no sh
 ex
 
+```
+
+## multilayer switchben lehetöségünk van egy switchportot router interfésszé átformálni csak annyit kell beirnunk hogy __no switchport__
+### A routing funkció engedélyezése hogy mondjuk a L3 sw tudjon ospfvt is kezelni: __ip routing__
+
+```bash
 
 int g0/1 
 no switchport                       ! multilayer sw3 ban sw portot sima interfészé
 ip routing                          ! multilayer sw3 ip r   outing engedélyezése
 
+```
 
+
+```bash
 
 
 int range fa0/1-8
@@ -113,6 +133,13 @@ sw mode access
 sw acces vlan 30
 ex
 
+```
+
+## mikor az L3 switcheknek nehéz napja van akkor baby ragelnek ilyenkor fülükbe kell sugni hogy : __switchport trunk e dot1q__
+
+### __switchport trunk e dot1q__ --> lényegében a trunk port engedélyezése (enélkül nem lehet és ez NEM subinterface miatt csniáljuk!!!)
+
+```bash
 
 int range gig0/1-2
 switchport trunk e dot1q            ! multilayer sw3 ban kell
@@ -121,7 +148,10 @@ sw trunk allowed vlan 10,20,30,99
 switchport trunk native vlan 99
 ex
 
+```
 
+
+```bash
 
 int vlan 10
 standby version 2
@@ -149,7 +179,9 @@ ex
 
 end 
 
-copy running-config startup-config 
+copy running-config startup-config
+
+
 
 
 
