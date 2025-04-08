@@ -2,11 +2,12 @@
 <img src="sw3.png" alt="multilayer_sw" width="300px">
 <i>Multi layer switch avagy gúnynevén az ánusz/napocska switch</i>
 
+<br>
+<br>
 
+<br>
 
-
-
-LACP beállitás mind a két oldalon be kell állitani
+# LACP beállitás mind a két oldalon be kell állitani
 ```bash
 interface range g1/0/10-11
 channel-group 2 mode active 
