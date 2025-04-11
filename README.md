@@ -1,4 +1,5 @@
 # multi_layer_sw_HSRP konfigurálás
+<img src="netmaszk.png" alt="multilayer_sw" width="300px">
 <img src="sw3.png" alt="multilayer_sw" width="300px">
 <i>Multi layer switch avagy gúnynevén az ánusz/napocska switch</i>
 
